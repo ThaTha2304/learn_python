@@ -3,7 +3,7 @@
 '''
 
 import os
-# import CRUD as CRUD
+import CRUD
 
 if __name__ == "__main__":
     # Ambil nama sistem operasi yang digunakan untuk menjalankan program
@@ -32,28 +32,27 @@ if __name__ == "__main__":
 
         # Input pilihan user dari menu yang disediakan
         user_option = input("Masukkan pilihan anda (1/2/3/4): ")
-        print()
 
         # Seleksi input dari user
         match user_option:
             # Menu 1
             case "1":
-                print(30*"-")
-                print("Read Data")
-                print(30*"-")
+                print("\nData yang telah dimasukkan ke dalam Database:")
+                CRUD.View.read_console()
+                
             # Menu 2
             case "2":
-                print(30*"-")
+                print(f"\n{30*'-'}")
                 print("Tambah Data")
                 print(30*"-")
             # Menu 3
             case "3":
-                print(30*"-")
+                print(f"\n{30*'-'}")
                 print("Update Data")
                 print(30*"-")
             # Menu 4
             case "4":
-                print(30*"-")
+                print(f"\n{30*'-'}")
                 print("Delete Data")
                 print(30*"-")
             # Selain 1/2/3/4
