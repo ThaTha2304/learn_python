@@ -1,2 +1,4 @@
-JGKRUT;2023-08-09-14-11-33+0700;Mencari Buah-buahan;Banana;2023
-AFGTST;2023-08-09-14-11-33+0700;Mencari Sayur-mayur;Tomato;2020
+NVCMOM;2023-08-11-00-21-58+0700;Belajar Bersama Kawan-kawan;Alpha Beta;2023
+WRPFSH;2023-08-11-00-22-29+0700;Belajar Bersama Teman-teman Ternyata Sangat Asyik Lohh...;Sigma Sigmoid;2022
+MKQURG;2023-08-11-00-23-05+0700;Belajar Python itu Mengasyikkan!;Seo A Ri;2024
+IQWVLU;2023-08-11-10-40-49+0700;Perjalanan Python Menuju Keabadian;Alpha Alphanumeric;2025

@@ -42,14 +42,12 @@ if __name__ == "__main__":
                 
             # Menu 2
             case "2":
-                print(f"\n{30*'-'}")
-                print("Tambah Data")
-                print(30*"-")
+                print("\nMenambahkan data baru ke dalam Database:")
+                CRUD.View.add_console()
             # Menu 3
             case "3":
-                print(f"\n{30*'-'}")
-                print("Update Data")
-                print(30*"-")
+                print("\nMengubah Data:")
+                CRUD.View.update_console()
             # Menu 4
             case "4":
                 print(f"\n{30*'-'}")
