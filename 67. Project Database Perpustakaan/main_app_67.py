@@ -50,9 +50,8 @@ if __name__ == "__main__":
                 CRUD.View.update_console()
             # Menu 4
             case "4":
-                print(f"\n{30*'-'}")
-                print("Delete Data")
-                print(30*"-")
+                print("\nMenghapus Data:")
+                CRUD.View.delete_console()
             # Selain 1/2/3/4
             case other:
                 print("Input anda salah!")

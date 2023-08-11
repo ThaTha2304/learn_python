@@ -30,7 +30,7 @@ def read_console():
         for index, data in enumerate(content):
             data_splited = data.split(';')
             no = index+1
-            judul = data_splited[2]
+            judul = data_splited[2][:45]
             penulis = data_splited[3]
             tahun = data_splited[4]
 
@@ -134,6 +134,42 @@ def update_console():
                 data_edit = ';'.join(data_splited)
                 data_baru.append(data_edit)
             
+            else:
+                # Masuk kesini jika ada data, tapi tidak masuk pilihan
+                data_baru.append(data)
+        
+        # Data baru yang telah di-update, dimasukkan ke dalam function update_db(list)
+        Operasi.update_db(data_baru)
+    except:
+        print("Database tidak ditemukan...")
+
+def delete_console():
+    '''
+        Function untuk menghapus data yang sebelumnya sudah pernah dimasukkan ke Database
+    '''
+    
+    data_baru = []
+
+    print("\nData yang sudah anda masukkan sebelumnya:")
+    read_console()
+
+    try:
+        delete_choice = int(input("Masukkan no Data yang ingin Anda hapus: "))
+
+        # Membuka dan membaca file database
+        with open(file = DB_NAME, mode="r") as file:
+            content = file.readlines()
+        
+        # Iterasi untuk setiap data pada database
+        for index, data in enumerate(content):
+            # Seleksi pilihan baris data yg ingin dihapus
+            if delete_choice <= 0 or delete_choice > len(content):
+                # Masuk kesini jika pilihan tidak benar
+                print("Data tidak ditemukan...")
+                break
+            elif delete_choice-1 == index:
+                # Masuk kesini jika ditemukan datanya
+                continue
             else:
                 # Masuk kesini jika ada data, tapi tidak masuk pilihan
                 data_baru.append(data)
